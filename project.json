@@ -1,6 +1,5 @@
 {
   "name": "AnexoComprovantePagamento",
-  "projectId": "d1a5eadd-114a-4dec-bbbf-b490c179cb4c",
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
@@ -23,7 +22,6 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
-    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"

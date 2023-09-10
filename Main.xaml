@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="844,1590.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="711,2581" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>Microsoft.VisualBasic</x:String>
@@ -99,7 +99,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="609.6,1525.6" sap2010:WorkflowViewState.IdRef="Sequence_152">
+  <Sequence sap:VirtualizedContainerService.HintSize="560,2436" sap2010:WorkflowViewState.IdRef="Sequence_152">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_dadosCompletos" />
     </Sequence.Variables>
@@ -108,21 +108,53 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="547.2,416" sap2010:WorkflowViewState.IdRef="CommentOut_16">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="498,332" sap2010:WorkflowViewState.IdRef="CommentOut_19">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,337.6" sap2010:WorkflowViewState.IdRef="Sequence_161">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,244" sap2010:WorkflowViewState.IdRef="Sequence_186">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_159">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LogarNewcon.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="LogarNewcon.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="498,332" sap2010:WorkflowViewState.IdRef="CommentOut_20">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,244" sap2010:WorkflowViewState.IdRef="Sequence_187">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="BaixarRelatorio.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="BaixarRelatorio.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="498,494" sap2010:WorkflowViewState.IdRef="CommentOut_16">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="462,366" sap2010:WorkflowViewState.IdRef="Sequence_161">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence sap:VirtualizedContainerService.HintSize="400,244" sap2010:WorkflowViewState.IdRef="Sequence_159">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PegarComprovantes.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="PegarComprovantes.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PegarComprovantes.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="PegarComprovantes.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:InvokeWorkflowFile.Arguments>
@@ -131,15 +163,15 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="547.2,304" sap2010:WorkflowViewState.IdRef="CommentOut_17">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="498,332" sap2010:WorkflowViewState.IdRef="CommentOut_23">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_163">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,244" sap2010:WorkflowViewState.IdRef="Sequence_190">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AdquirirGrupoCota.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AdquirirGrupoCota.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AdquirirGrupoCota.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="AdquirirGrupoCota.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <scg:Dictionary x:TypeArguments="x:String, Argument" />
             </ui:InvokeWorkflowFile.Arguments>
@@ -147,7 +179,7 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <Sequence sap2010:Annotation.AnnotationText="Separar cada cota encontrada" sap:VirtualizedContainerService.HintSize="547.2,114.4" sap2010:WorkflowViewState.IdRef="Sequence_174">
+    <Sequence sap2010:Annotation.AnnotationText="Separar cada cota encontrada" sap:VirtualizedContainerService.HintSize="498,121" sap2010:WorkflowViewState.IdRef="Sequence_191">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_dadosPdfs" />
       </Sequence.Variables>
@@ -158,15 +190,118 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadCsvFile DataTable="[dt_dadosPdfs]" Delimitator="Semicolon" DisplayName="Read CSV" FilePath="dt_dadosPdfs.csv" sap:VirtualizedContainerService.HintSize="580.8,155.2" sap2010:WorkflowViewState.IdRef="ReadCsvFile_3" />
-      <ui:BuildDataTable DataTable="[dt_dadosCompletos]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="580.8,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;DiaPagamento&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Destinatario&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Valor&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DocName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Retorno&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_dadosPdfs]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="580.8,908.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <ui:ReadCsvFile DataTable="[dt_dadosPdfs]" Delimitator="Semicolon" DisplayName="Read CSV" FilePath="dt_dadosPdfs.csv" sap:VirtualizedContainerService.HintSize="532,162" sap2010:WorkflowViewState.IdRef="ReadCsvFile_3" />
+      <ui:BuildDataTable DataTable="[dt_dadosCompletos]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="532,69" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;DiaPagamento&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Destinatario&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Valor&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DocName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Retorno&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+      <ui:FilterDataTable DataTable="[dt_dadosPdfs]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="532,170" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_dadosPdfs]" SelectColumnsMode="Remove">
+        <ui:FilterDataTable.Filters>
+          <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="16">
+            <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:Int32">[4]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Tipo Pagto: 106"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:Int32">[4]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Tipo Pagto: 105"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:Int32">[4]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Tipo Pagto: 104"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:Int32">[4]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Tipo Pagto: 103"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:Int32">[4]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Tipo Pagto: 102"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:Int32">[4]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Tipo Pagto: 101"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:Int32">[4]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Tipo Pagto: 100"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:Int32">[4]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Tipo Pagto: 110"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:Int32">[4]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Tipo Pagto: 107"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:Int32">[4]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Tipo Pagto: 108"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+            <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:Int32">[4]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Tipo Pagto: 109"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+          </scg:List>
+        </ui:FilterDataTable.Filters>
+        <ui:FilterDataTable.SelectColumns>
+          <scg:List x:TypeArguments="InArgument" Capacity="8">
+            <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
+            <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+            <InArgument x:TypeArguments="x:Int32">[2]</InArgument>
+            <InArgument x:TypeArguments="x:Int32">[3]</InArgument>
+            <InArgument x:TypeArguments="x:Int32">[4]</InArgument>
+          </scg:List>
+        </ui:FilterDataTable.SelectColumns>
+      </ui:FilterDataTable>
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_dadosPdfs]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="532,949" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="547.2,792" sap2010:WorkflowViewState.IdRef="Sequence_165">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="498,824" sap2010:WorkflowViewState.IdRef="Sequence_165">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="Cota" />
                 <Variable x:TypeArguments="x:Int32" Default="0" Name="Count" />
@@ -176,7 +311,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="484.8,81.6" sap2010:WorkflowViewState.IdRef="Assign_169">
+              <Assign sap:VirtualizedContainerService.HintSize="436,70" sap2010:WorkflowViewState.IdRef="Assign_169">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[Cota]</OutArgument>
                 </Assign.To>
@@ -184,20 +319,20 @@
                   <InArgument x:TypeArguments="x:String">[row(4).ToString]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="484.8,558.4" sap2010:WorkflowViewState.IdRef="ForEach`1_13" Values="[Cota.Split(Environment.NewLine.ToArray, StringSplitOptions.RemoveEmptyEntries)]">
+              <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="436,592" sap2010:WorkflowViewState.IdRef="ForEach`1_13" Values="[Cota.Split(Environment.NewLine.ToArray, StringSplitOptions.RemoveEmptyEntries)]">
                 <ui:ForEach.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="currentItem" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="449.6,432.8" sap2010:WorkflowViewState.IdRef="Sequence_168">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,458" sap2010:WorkflowViewState.IdRef="Sequence_168">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_106" Level="Info" Message="[currentItem.ToString]" />
-                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object(){row(0).ToString, row(1).ToString.TrimEnd, row(2).ToString, row(3).ToString, currentItem.ToString}]" DataTable="[dt_dadosCompletos]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="387.2,188" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,101" sap2010:WorkflowViewState.IdRef="LogMessage_106" Level="Info" Message="[currentItem.ToString]" />
+                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[New Object(){row(0).ToString, row(1).ToString.TrimEnd, row(2).ToString, row(3).ToString, currentItem.ToString}]" DataTable="[dt_dadosCompletos]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="338,195" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                     </Sequence>
                   </ActivityAction>
                 </ui:ForEach.Body>
@@ -212,10 +347,10 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" AutoIncrement="True" ColumnName="ConferenciaDestinatarios" DataTable="[dt_dadosCompletos]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="580.8,188" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
-      <ui:WriteCsvFile AddHeaders="True" DataTable="[dt_dadosCompletos]" Delimitator="Semicolon" DisplayName="Write CSV" FilePath="dt_dadosCompletos.csv" sap:VirtualizedContainerService.HintSize="580.8,155.2" sap2010:WorkflowViewState.IdRef="WriteCsvFile_5" ShouldQuote="True" />
+      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" AutoIncrement="True" ColumnName="ConferenciaDestinatarios" DataTable="[dt_dadosCompletos]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="532,195" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
+      <ui:WriteCsvFile AddHeaders="True" DataTable="[dt_dadosCompletos]" Delimitator="Semicolon" DisplayName="Write CSV" FilePath="dt_dadosCompletos.csv" sap:VirtualizedContainerService.HintSize="532,162" sap2010:WorkflowViewState.IdRef="WriteCsvFile_5" ShouldQuote="True" />
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Conferir se o nome do destinatario bate com o comprovante de pagamento" sap:VirtualizedContainerService.HintSize="547.2,114.4" sap2010:WorkflowViewState.IdRef="Sequence_170">
+    <Sequence sap2010:Annotation.AnnotationText="Conferir se o nome do destinatario bate com o comprovante de pagamento" sap:VirtualizedContainerService.HintSize="498,132" sap2010:WorkflowViewState.IdRef="Sequence_192">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -223,13 +358,13 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_dadosCompletos]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1132,1224" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_dadosCompletos]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="941,1249" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1098.4,1107.2" sap2010:WorkflowViewState.IdRef="Sequence_171">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="907,1125" sap2010:WorkflowViewState.IdRef="Sequence_171">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="DestinatarioRelatorioFinanceiro" />
                 <Variable x:TypeArguments="x:String" Name="DestinatarioComprovanteSistema" />
@@ -239,7 +374,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="1036,81.6" sap2010:WorkflowViewState.IdRef="Assign_172">
+              <Assign sap:VirtualizedContainerService.HintSize="845,70" sap2010:WorkflowViewState.IdRef="Assign_172">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[DestinatarioRelatorioFinanceiro]</OutArgument>
                 </Assign.To>
@@ -247,8 +382,8 @@
                   <InArgument x:TypeArguments="x:String">[row(4).ToString]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1036,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_109" Level="Trace" Message="[&quot;DestinatarioRelatorioFinanceiro &quot;+DestinatarioRelatorioFinanceiro]" />
-              <Assign sap:VirtualizedContainerService.HintSize="1036,81.6" sap2010:WorkflowViewState.IdRef="Assign_171">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="845,101" sap2010:WorkflowViewState.IdRef="LogMessage_109" Level="Trace" Message="[&quot;DestinatarioRelatorioFinanceiro &quot;+DestinatarioRelatorioFinanceiro]" />
+              <Assign sap:VirtualizedContainerService.HintSize="845,70" sap2010:WorkflowViewState.IdRef="Assign_171">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[DestinatarioComprovanteSistema]</OutArgument>
                 </Assign.To>
@@ -256,16 +391,16 @@
                   <InArgument x:TypeArguments="x:String">[row(1).ToString]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1036,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_110" Level="Trace" Message="[&quot;DestinatarioComprovanteSistema &quot;+DestinatarioComprovanteSistema]" />
-              <If Condition="[DestinatarioRelatorioFinanceiro.ToString.Contains(DestinatarioComprovanteSistema)]" sap:VirtualizedContainerService.HintSize="1036,486.4" sap2010:WorkflowViewState.IdRef="If_13">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="845,101" sap2010:WorkflowViewState.IdRef="LogMessage_110" Level="Trace" Message="[&quot;DestinatarioComprovanteSistema &quot;+DestinatarioComprovanteSistema]" />
+              <If Condition="[DestinatarioRelatorioFinanceiro.ToString.Contains(DestinatarioComprovanteSistema)]" sap:VirtualizedContainerService.HintSize="845,501" sap2010:WorkflowViewState.IdRef="If_13">
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="496,326.4" sap2010:WorkflowViewState.IdRef="Sequence_172">
+                  <Sequence sap:VirtualizedContainerService.HintSize="400,333" sap2010:WorkflowViewState.IdRef="Sequence_172">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_173">
+                    <Assign sap:VirtualizedContainerService.HintSize="338,70" sap2010:WorkflowViewState.IdRef="Assign_173">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Object">[Row(5)]</OutArgument>
                       </Assign.To>
@@ -273,17 +408,17 @@
                         <InArgument x:TypeArguments="x:Object">["Destinatário Correto"]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_107" Level="Info" Message="[&quot;Destinatário Correto&quot;]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,101" sap2010:WorkflowViewState.IdRef="LogMessage_107" Level="Info" Message="[&quot;Destinatário Correto&quot;]" />
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence sap:VirtualizedContainerService.HintSize="496,326.4" sap2010:WorkflowViewState.IdRef="Sequence_173">
+                  <Sequence sap:VirtualizedContainerService.HintSize="400,333" sap2010:WorkflowViewState.IdRef="Sequence_173">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_174">
+                    <Assign sap:VirtualizedContainerService.HintSize="338,70" sap2010:WorkflowViewState.IdRef="Assign_174">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Object">[Row(5)]</OutArgument>
                       </Assign.To>
@@ -291,7 +426,7 @@
                         <InArgument x:TypeArguments="x:Object">["Destinatário Incorreto"]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_108" Level="Info" Message="[&quot;Destinatário Incorreto&quot;]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,101" sap2010:WorkflowViewState.IdRef="LogMessage_108" Level="Info" Message="[&quot;Destinatário Incorreto&quot;]" />
                   </Sequence>
                 </If.Else>
               </If>
@@ -305,17 +440,17 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <ui:WriteCsvFile AddHeaders="True" DataTable="[dt_dadosCompletos]" Delimitator="Semicolon" DisplayName="Write CSV" FilePath="dt_dadosCompletos.csv" sap:VirtualizedContainerService.HintSize="1132,155.2" sap2010:WorkflowViewState.IdRef="WriteCsvFile_6" ShouldQuote="True" />
+      <ui:WriteCsvFile AddHeaders="True" DataTable="[dt_dadosCompletos]" Delimitator="Semicolon" DisplayName="Write CSV" FilePath="dt_dadosCompletos.csv" sap:VirtualizedContainerService.HintSize="941,162" sap2010:WorkflowViewState.IdRef="WriteCsvFile_6" ShouldQuote="True" />
     </Sequence>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="547.2,304.8" sap2010:WorkflowViewState.IdRef="CommentOut_18">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="498,331" sap2010:WorkflowViewState.IdRef="CommentOut_18">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="512,226.4" sap2010:WorkflowViewState.IdRef="Sequence_183">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="462,243" sap2010:WorkflowViewState.IdRef="Sequence_183">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="Anexar Doc no sistema" sap:VirtualizedContainerService.HintSize="449.6,114.4" sap2010:WorkflowViewState.IdRef="Sequence_175">
+          <Sequence sap2010:Annotation.AnnotationText="Anexar Doc no sistema" sap:VirtualizedContainerService.HintSize="400,121" sap2010:WorkflowViewState.IdRef="Sequence_175">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -323,7 +458,7 @@
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="744,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_111" Level="Info" Message="[&quot;Abrindo Sistema&quot;]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="744,101" sap2010:WorkflowViewState.IdRef="LogMessage_111" Level="Info" Message="[&quot;Abrindo Sistema&quot;]" />
             <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Intranet Newcon" sap:VirtualizedContainerService.HintSize="744,3771.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="195d9c69-1243-4a38-a4db-9f202ec303f3" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
@@ -459,7 +594,7 @@
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="https://consorcio.sicredi.com.br/CONAT/frmConAtSrcConsorciado.aspx" CvElementArea="741, 465, 74, 29" CvTextArea="747, 470, 53, 16" CvTextArgument="000000" CvType="InputBox" DesignTimeRectangle="505, 414, 75, 30" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'000000'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='text' aaname='' /&gt;" Guid="a0678523-f46e-45d8-a5e5-5ee1981c7e95" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAiCAYAAAAeXoQCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMxSURBVGhD7ZrbjtowFEX7TZ0PpZ8yv9DXee8jvBQ0CIk7w2W4uFmuj3V8cBgurlSFbGlLg3Gcs1dOAiTzzbW6Wy28B9TCe0BZeIvFwg0GA9fr9Vy3231akx8O8MgpgXc6ndz7+7vr9/tuNBq58XjsJpOJm06nbjabRc/n88ZZ5yMvuckPB3jABT5aCTwmDIdDvxELsCjUl8ulW61WT2Pykpv8cIAHXOCjFeExGcJMhD6vWWi9XrvNZuO93W4bb8lKbvLDAR5wgQ+vRREe5zYtCmkmfHx8+EW+d06N9n6/9/78/Ize7XYRJBzgARf4wEkU4XFxhC6tCnE2ZJHcDpvkw+FwZoFJfjjAAy7wgZMowuPTRbqOloU8C7CDlx+useZDQPt4PHoDkfxwgId0H5xEZ/C4WErXcQTijn5W18Uw12uSFiF+24b3g14zc16rbbXeqrXtnJdf4c2gxe/MnAI1WXhiAJJfug8uF+FxYZRTFurQ9zsJRfaqQLJT37ymWF+kGhNIulg/Vs3rhNedCgpKAAZwcSzsPwFYqCYrDU+6T05d+HwJT05ZgecLUIG9TcAshMoEiqHDNjowtgFzEGR9CV2qppwsPHh8CU8+LCy8BICyHrcdJdbjFoA4Gc90lLcZL1VTTtJ9Fh58roLH+e7h1YWpTKHSIbZ7xPo0qQuTdIjpnuhQhwdTsKacNDw4/BN4uri6QnVX1cFLgNXBqxy7qmBNObXwzN/a/wW89rQNqoVX7SAecVWAHa8Do8f1EddzkvE6MGa8VE05FYWXPYKmQ+rAJCFrusqunwNj1y9VU05F4UlROhAF2OL9mDrS+vSQOT60GpOAGqiMxe4LXZcALVRTTg/D09/zvEOAKHvUgwWOyB51LAFEZ9c3HOCIbCd6F6gpJw3v6u95db8wmuycAHfzLwyBd/bbtsG2kq67+bftxbsqDbXAsr75rgpvtvfz7rif195JfuBOct0zDMizCIuJWbxp1vnIS27yX/UMgwnt07M7n56h9rntX5OX3OSHAzwuPrdFXDCZAGFalI3a/xi48j8GRFDn3ObiyKfLs5r8cNCnqlYWXqvr1MK7W879ASuEJNjSUjdsAAAAAElFTkSuQmCC" InformativeScreenshot="61a3f2bac214c07352d498c05559aa24.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Intranet Newcon' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CvTextArgument="Grupo" CvType="Text" DesignTimeRectangle="505, 391, 75, 18" ElementType="Text" FriendlyName="'Grupo'" FullSelectorArgument="&lt;webctrl class='legenda_campo' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='legenda_campo' tag='SPAN' type='' aaname='Grupo' check:innerText='Grupo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAWCAYAAACBtcG5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAE5SURBVFhH7ZXbDYQgEEWpkWQbMrSCpWghflgGS4ZBXoPKkvWRzEn4AHkeLyoM8zMsrwOW1wHL64DldcDyOmB5HdDyFm2kEEZkRc34nAEKedNAi1pHCe1yXLGFSeXNygqSRi9Yz7GJVCxvI5K3Gv2xqRsmrB8R+vtU+sRCevN58heDnwY1T0bhWCjE+v42xGs8gUieO8T5a4nyiDEt8oRQdmVPuQcnLuqD457w+QjytiRgHQiCfAmbrie1LXlYRyDFH21nt+z1SaTfQ0Py8uf/kef6oZh8jKfWfjEN3zyWlxPJ89ehtqlr5MHY911bB2yeSgQe5Iy88nBO/KE8EJy2uf1EcxX7uI9CHoAbjH8UZSL3r7l/Ca7Yw1eSl65BvDRLOhfd5w5oeVdAJe9lsLwOWF4H98l7PcZ8AYD2m8/to/FHAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
@@ -470,7 +605,7 @@
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="https://consorcio.sicredi.com.br/CONAT/frmConAtSrcConsorciado.aspx" CvElementArea="584, 411, 77, 31" CvTextArea="590, 417, 40, 16" CvTextArgument="0000" CvType="InputBox" DesignTimeRectangle="586, 467, 75, 30" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'0000'" FullSelectorArgument="&lt;webctrl name='ctl00$Conteudo$edtCota' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='ctl00$Conteudo$edtCota' tag='INPUT' type='text' class='text blockalpha' aaname='' /&gt;" Guid="25f9994a-b278-4cf4-b9b6-0ebd59cb3576" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAiCAYAAAAeXoQCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMTSURBVGhD7ZpbUsJAEEVZI1UuSGUpxJ2Aq9APlUdRxVNBkUfLSaZDZ0gQQfggc6v6g6Ez1D3pnsmDigQdrQDvBOXCm0wm0mq15Pn5WZ6enkob+IcDPPKUgbder6XT6cjb25v0ej3p9/syGAxkOBzKaDRKYzweX11Yf/jFN/7hAA+4wMcqA4+EbrcbH8QETAr19/d3+fj4KE3gF9/4hwM84AIfqxQeyRAmEfp8ZqLZbCafn59xfH19XX2oV3zjHw7wgAt8+KxK4dHblCikSZhOpymw+Xwu39/faSwWi6sL6w+/ChIO8IALfOCkSuGxOEKXUoU4Byo0Jl8ul6UJhYl/OMADLvCBkyqFx+6iVUfJQp4JmGy1WsXBgnntoV7xjX84wEOrD06qHXgsllp1nIEttLbUbypSqWjcS8P7YaJxa3OqUn/ZzVk3701ORapRezfnpS5Vk1O5bezmnDHwjX+tPrjshcfCqC1rqy4Fd9d02SLNO0zVZDvixm4i0T2p81Dd5FQlenUD6LGWHXuNYkjVB7OTubHao/u8+ZUaAM3vn0sWnlafti58foVnW5aJ2lEOBGcoNR1DsYZRR6IM9HwICWQ9Ee4YcxJi+dDPKB8ePH6Fp5uFDy9uRd/MRrbSsgC2yozvVJRTZtw7KamKxv9fWn0+PPgcBE932LyWVdnW9VtWlWndouqxrVsE2MG7ZOviHw5ngWerqgheBlhh65mqKoTnLwHnU4B3gi4CL7StUzG8cm8YJ8NLLlV8MJ6Z3KrKv1TxAWTBF7RnYcv/v/4V3nrdSFrGVJ9t2UTOtBnLtKxTMmaqz7asKgZlxy7XsuhkePY6j9jC0fArMVECVaOgUhwcjdxWdFDTvAuBQxbewdd5RXcYCbzyCL9/vsNQeLv3tuUBqF7/fG+7/6lKuQLf+D/4qQpfhud5RzzPC0+St4FffGvVwQMuhU+SwzuME95hkBDenh359gyF97ZJ4Bff+IcDPPa+t0UsmCRAmBLloPCPgQP/MaCCOr3N4sjuUtbAPxxsq1rlwgs6TAHeCQrwjpbID5d8klNR4HWsAAAAAElFTkSuQmCC" InformativeScreenshot="d474cf4a19f73784320fe96943aebcfe.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Intranet Newcon' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target DesignTimeRectangle="589, 444, 50, 18" ElementType="Text" FriendlyName="'Cota'" FullSelectorArgument="&lt;webctrl aaname='Cota' class='legenda_campo' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Cota' class='legenda_campo' tag='SPAN' type='' check:innerText='Cota' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAWCAYAAACL6W/rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABLSURBVFhH7dJBCQAwDEPR+VdRY+2tBmogu4x5+CUPIuBDjp6ZUXerqpSZ+P2wbRxG4zAah9E4jMZhNA6jcRjN3rCI0Mb5ijQOY5Eucn8uAyhiPKwAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
@@ -523,7 +658,7 @@
                                         <uix:NTypeInto.Target>
                                           <uix:TargetAnchorable CvType="InputBox" DesignTimeRectangle="140, 42, 490, 40" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'Este Computador'" Guid="40e07694-123e-489a-bbea-1f30cc5a61e6" InformativeScreenshot="e7eb21017cdea3f5155f75d7b3254abb.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Abrir' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
                                             <uix:TargetAnchorable.Anchors>
-                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                 <uix:Target CvTextArgument="Este Computador" CvType="Text" DesignTimeRectangle="189, 53, 117, 18" ElementType="Text" FriendlyName="'Este Computador'" SearchSteps="CV" TargetType="ComputerVisionBased" />
                                               </scg:List>
                                             </uix:TargetAnchorable.Anchors>
