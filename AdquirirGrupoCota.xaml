@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="AdquirirGrupoCota" sap:VirtualizedContainerService.HintSize="756,4284" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="AdquirirGrupoCota" sap:VirtualizedContainerService.HintSize="1240,4160" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
       <x:String>Microsoft.VisualBasic</x:String>
@@ -83,24 +83,19 @@
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="766,4019" sap2010:WorkflowViewState.IdRef="Sequence_163">
+  <Sequence sap:VirtualizedContainerService.HintSize="766,4055" sap2010:WorkflowViewState.IdRef="Sequence_163">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_dadosRelatorioPag" />
-      <Variable x:TypeArguments="x:Int32" Name="count">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Pegar Grupo e Cota dos Pagamentos" sap:VirtualizedContainerService.HintSize="704,3897" sap2010:WorkflowViewState.IdRef="Sequence_162">
+    <Sequence sap2010:Annotation.AnnotationText="Pegar Grupo e Cota dos Pagamentos" sap:VirtualizedContainerService.HintSize="704,3933" sap2010:WorkflowViewState.IdRef="Sequence_162">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_dadosPdfs" />
         <Variable x:TypeArguments="x:String" Name="textPDF" />
@@ -113,14 +108,30 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:ReadCsvFile DataTable="[dt_dadosPdfs]" Delimitator="Semicolon" DisplayName="Read CSV" FilePath="dt_dadosPdfs.csv" sap:VirtualizedContainerService.HintSize="642,162" sap2010:WorkflowViewState.IdRef="ReadCsvFile_2" />
-      <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="C:\Users\andrade_cicero\Documents\Report.pdf" sap:VirtualizedContainerService.HintSize="642,69" sap2010:WorkflowViewState.IdRef="ReadPDFText_8" Range="All" Text="[textPDF]" />
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Organizar Valores para a Busca" DataTable="[dt_dadosPdfs]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="642,3231" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="642,375" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="5">
+        <ui:RetryScope.ActivityBody>
+          <ActivityAction>
+            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="400,191" sap2010:WorkflowViewState.IdRef="Sequence_175">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="C:\Users\andrade_cicero\Documents\Report.pdf" sap:VirtualizedContainerService.HintSize="338,69" sap2010:WorkflowViewState.IdRef="ReadPDFText_8" Range="All" Text="[textPDF]" />
+            </Sequence>
+          </ActivityAction>
+        </ui:RetryScope.ActivityBody>
+        <ui:RetryScope.Condition>
+          <ActivityFunc x:TypeArguments="x:Boolean" />
+        </ui:RetryScope.Condition>
+      </ui:RetryScope>
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Organizar Valores para a Busca" DataTable="[dt_dadosPdfs]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="642,2961" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="608,3075" sap2010:WorkflowViewState.IdRef="Sequence_140">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="608,2805" sap2010:WorkflowViewState.IdRef="Sequence_140">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Int32" Name="MesDiaPag" />
                 <Variable x:TypeArguments="x:String" Name="DiaPag" />
@@ -187,7 +198,7 @@
                 </Assign.Value>
               </Assign>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="546,101" sap2010:WorkflowViewState.IdRef="LogMessage_106" Level="Info" Message="[&quot;valor: &quot;+valor]" />
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="546,331" sap2010:WorkflowViewState.IdRef="CommentOut_15">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="546,61" sap2010:WorkflowViewState.IdRef="CommentOut_15">
                 <ui:CommentOut.Body>
                   <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="462,243" sap2010:WorkflowViewState.IdRef="Sequence_174">
                     <sap:WorkflowViewStateService.ViewState>
@@ -231,6 +242,12 @@
                     </Sequence>
                   </Sequence>
                 </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
               </ui:CommentOut>
               <Sequence sap:VirtualizedContainerService.HintSize="546,1398" sap2010:WorkflowViewState.IdRef="Sequence_142">
                 <Sequence.Variables>
@@ -290,7 +307,7 @@
                     </Sequence>
                   </If.Else>
                 </If>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,101" sap2010:WorkflowViewState.IdRef="LogMessage_101" Level="Warn" Message="[valor]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,101" sap2010:WorkflowViewState.IdRef="LogMessage_101" Level="Info" Message="[valor]" />
                 <Assign sap:VirtualizedContainerService.HintSize="484,70" sap2010:WorkflowViewState.IdRef="Assign_166">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Object">[row(4)]</OutArgument>
@@ -393,7 +410,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
-      <ui:WriteCsvFile AddHeaders="True" DataTable="[dt_dadosPdfs]" Delimitator="Semicolon" DisplayName="Write CSV" FilePath="dt_dadosPdfs.csv" sap:VirtualizedContainerService.HintSize="642,162" sap2010:WorkflowViewState.IdRef="WriteCsvFile_2" ShouldQuote="True" />
+      <ui:WriteCsvFile AddHeaders="False" DataTable="[dt_dadosPdfs]" Delimitator="Semicolon" DisplayName="Write CSV" FilePath="dt_dadosPdfs.csv" sap:VirtualizedContainerService.HintSize="642,162" sap2010:WorkflowViewState.IdRef="WriteCsvFile_2" ShouldQuote="True" />
     </Sequence>
   </Sequence>
 </Activity>
