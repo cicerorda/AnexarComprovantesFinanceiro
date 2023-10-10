@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="dt_dadosCompletos" Type="InOutArgument(sd:DataTable)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1240,10254</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1240,3082</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="70">
@@ -93,7 +93,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Anexar Doc no sistema" sap:VirtualizedContainerService.HintSize="940,10149" sap2010:WorkflowViewState.IdRef="Sequence_193">
+  <Sequence sap2010:Annotation.AnnotationText="Anexar Doc no sistema" sap:VirtualizedContainerService.HintSize="940,2897" sap2010:WorkflowViewState.IdRef="Sequence_193">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -104,19 +104,19 @@
     <ui:ReadCsvFile DataTable="[dt_dadosCompletos]" Delimitator="Semicolon" DisplayName="Read CSV" FilePath="dt_dadosCompletos.csv" sap:VirtualizedContainerService.HintSize="878,153" sap2010:WorkflowViewState.IdRef="ReadCsvFile_4" />
     <ui:RemoveDuplicateRows DataTable="[dt_dadosCompletos]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="878,80" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1" OutputDataTable="[dt_dadosCompletos]" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="878,92" sap2010:WorkflowViewState.IdRef="LogMessage_111" Level="Info" Message="[&quot;Abrindo Sistema&quot;]" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_dadosCompletos]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="878,8754" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_dadosCompletos]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="878,1502" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="844,8638" sap2010:WorkflowViewState.IdRef="Sequence_179">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="648,1386" sap2010:WorkflowViewState.IdRef="Sequence_179">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="782,8527" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="586,1275" sap2010:WorkflowViewState.IdRef="TryCatch_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -124,7 +124,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="744,8299" sap2010:WorkflowViewState.IdRef="Sequence_211">
+                <Sequence sap:VirtualizedContainerService.HintSize="744,8259" sap2010:WorkflowViewState.IdRef="Sequence_211">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -693,10 +693,10 @@
                 </Sequence>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="684,21" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="552,1112" sap2010:WorkflowViewState.IdRef="Catch`1_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -724,7 +724,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'cnp3.exe NewCon'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="14497009-4c29-4b18-93a1-4872fcd23c1d" Version="V3">
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'cnp3.exe NewCon'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_23" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="14497009-4c29-4b18-93a1-4872fcd23c1d" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable DesignTimeRectangle="10, 137, 53, 42" DesignTimeScaleFactor="1" FriendlyName="'cnp3.exe NewCon'" Guid="09005e3f-9666-431d-bdab-2e4feb632624" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADUAAAAqCAYAAAATZhM+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAS8SURBVGhD7Zl9TFVlHMd9yVWWumb9Ua0tx9Zqa7W2NCoblW3mXFIaYbZEliEUIEqZoFOQF+lSgE4gBIEGggIiL10JuKPkzUBSHFCYvCjIFSZQvFzk/dt5Ds+V670/vPc5tOtofLbvP5zzO/w+557zvNw7B/9DZqVmCrNSM4VZqf+S7t4+xGUXYI2nH1a57UVoUiZudHbzo9Pjnkj9qC6CrfNXWGD7AeYuXydn/iv2eN7RHeEp2RgfH+dnKsPqUrsOJ9wWmSobfVUYHhnlFeJMW2pMuqu/Xr6GxPJLyKttQP/gMD9iSnyOhpSgcjAxg1eJMy0pJvPigVgscAvGHJdAzNsWhGW+R5BQdomfMUmf7haWb95JClB5/F0ndPX08WoxFEuVNrTiIY9vZRkq0Wd/52dOUHyxDve/tp4UoDJvhT1+Kj3Pq8VQJDU8Ooa3w5JJGX2e3HUIrd09vAJyg1Tzd0tsVgGvFkORVJ32Jh78MoSUMUzSbzW8QtknlVtSyavFUCRV3dqO+a5BpIhhjhZf4BVAT78OL3+6gxSg8sQaK79TXf0DeHZfNCmiD/skK5rbeMUEIqNfYHwarxJH8UARoakgZfRxTszlZ96J1/expIRh7uk85Z1eSApt+CEDvbeG+FmmRJ/Kw1NrnU1klq7aBP/YExgZVS7EmJYUo7zxOrafLIBDzCm4Jp+BuuYKP2LK4NDkxMzeMTYiBiek40DcCZwsLEFH9z/8KDAwOPVNMYciKbZqSK2sw9/ShEoxOjaOZGnku9jSzv8ClEij3wonb7y3IwAX6hv5X0250qKF0/5weVCx2ujHRN4JPy4/ZjZ7IrEv56y8PCqTJuPCP5qgyj+HlwLiMHdbIFIqa+UadWkVFts53n7M2EJ25dZvsCcqCVEZZxCT+TP8jqZitft+LLL76I5HMiFXI19DBGEpj9R8k3eIim1IgvyJNbRq5XfFsFGRPPD6BlT/1cT/u2UISZ2/qsUjXt+REsYJziuTa9wORpHNimSLX4TQdkRIig0GlIBx2KN3rlmLoaEhPL1uK9moSJZJ12jWdvAuzCMktdgzlJQwziJPFRq7elBVWy8/PlSjImHv4JE0Ne/CPEJSlACVR3eG4XqPDmn5xWSTSuKwO4R3YR4hqce8w0gJ47Dz2np1iM/KJxtUkrdcfXkX5hGSso9MIyWMs2R7KJq6enFcXUQ2qCRrvfx5F+YRksquvoyF7lNvDPW5zzUYNTc6oSmvkrcQVJMiYV/KeITG8C7MIySlk5Y5r0rzDyVinPz6a2huacOSNzeSjYpk4coPka6ZmCIsQUiKcay0mpQwzteZv6BfN4Bn1ruSjYrE5n0XtLTf5B2YR1iKfXu0JTGHFDGMzd4ojEgris/8I8hGReLoo8KYdC1LEZZisOWPz+kiPOyhIoVYPjmWBZ20J9JUVJONioSt4EVQJKWnvr0Th4sqsSnuNFYfSpH3UQHqEnk7oodt9tgcQzVrSd74fLd0E8f41SxjWlKW0trRieccviCbvlvYd3/1VydvkKVYRYrB9kl2Lj5k81Re+NgDVX828GoxrCbFYNv0yHS1/CuH4f5KHzZ0sx8OguLT5J2xUqwqZS1mpWYKs1IzA+Bf5Cgll0AOPegAAAAASUVORK5CYII=" InformativeScreenshot="b0c0da6fa3c0f8b1ec88f8a809b35bbc.png" ScopeSelectorArgument="&lt;wnd app='cnp3.exe' cls='TfrmMain' title='NewCon' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V2" Visibility="Interactive" />
                                 </uix:NClick.Target>
